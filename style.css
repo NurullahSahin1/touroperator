@@ -1,0 +1,361 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+
+
+}
+
+:root{
+    --main-color:#2f4e6d;
+    --text-color:#fff;
+    --background-color:rgb(24, 193, 156);
+    --h1-font: 5rem;
+    --h2-font:3rem;
+    --p-font:1.2rem;
+    --transition: all .4s ease-out ;
+
+}
+
+body{
+    background-color:var(--background-color);
+    color:var(--text-color) ;
+    overflow-x: hidden;
+}
+.button{
+    background-color: var(--background-color);
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 10px;
+    color: var(--text-color);
+    font-size: 20px;
+    border: 2px solid transparent;
+    transition: var(--transition);
+}
+.main-text{
+    color: rgb(24, 162, 164);
+    font-size: 30px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 6px;
+}
+
+.button:hover{
+    transform: translate(10px);
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    color: cadetblue;
+    font-weight: 800;
+
+}
+
+header{
+    width: 100%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    backdrop-filter: blur(35px);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    right: 0;
+    flex-wrap: wrap;
+}
+header .logo{
+    width: 80px;
+    margin-left: 100px;
+    background-color: transparent;
+}
+
+
+.navbar a{
+    color: var(--text-color);
+    margin: 15px 20px;
+    font-weight: 600;
+    font-size: 20px;
+}
+.navbar a:hover{
+color: var(--background-color);
+transition: var(--transition);
+}
+.right-header{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.right-header:hover{
+    color: var(--background-color);
+    transition: var(--transition);
+}
+.right-header a{
+    color: var(--text-color);
+
+}
+.right-header a:hover{
+    color: var(--background-color);
+    transition: var(--transition);
+    transform: translateY(-5px);
+}
+
+.home{
+background-image: linear-gradient(to left, rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url(images/Background.png);
+width: 100%;
+height: 100vh;
+background-position: center;
+background-size:cover ;
+position: relative;
+display: flex;
+align-items: first baseline;
+flex-direction:column ;
+justify-content: center;
+
+}
+.home .home-text{
+margin-top: 80px;
+margin-left: 45px;
+
+}
+.home .home-text h1{
+    font-size: var(--h1-font);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+
+}
+.home .home-text p.home-content{
+    font-size: 25px;
+    color: #cdc1c1;
+    line-height: 37px;
+}
+.home-content{
+    position: absolute;
+    animation: yazi-anim 10s ease-in-out infinite;
+    animation-fill-mode: backwards;
+    transform: translate(-200px);
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+}
+h5.home-content{
+    bottom: 100px;
+}
+h1.home-content{
+    bottom: 350px;
+}
+p.home-content{
+    bottom: 150px;
+   
+}
+a.home-content{
+    bottom: 10px;
+}
+
+.home-content:nth-child(4){
+    animation-delay: 2s;
+}
+.home-content:nth-child(3){
+    animation-delay: 4s;
+    
+}
+.home-content:nth-child(2){
+    animation-delay: 5s;
+
+}
+.home-content:nth-child(1){
+    animation-delay: 3s;
+
+}
+@keyframes yazi-anim{
+    0%{
+        transform:translateY(-100px);
+        opacity: 0;
+    }
+    5%{
+        transform:translateY(0px);
+        opacity: 1;
+    }
+    20%{
+        transform:translateY(0px);
+        opacity: 1;
+    }
+    40%{
+        transform:translateY(0px);
+        opacity: 1;
+    }
+
+    100%{
+        transform:translateY(100px);
+        opacity: 0;
+    }
+}
+
+
+.home .home-text p{
+    font-size: var(--p-font);
+    color: #979797;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+
+.holiday{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10rem;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.holiday-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.holiday-text{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.holiday-text h1{
+    font-size: 40px;
+}
+.holiday-text p{
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.holiday-btn{
+    background-color: rgb(24, 71, 72);
+    margin-bottom: 30px;
+    
+
+}
+.holiday-btn:hover{
+    background-color: transparent;
+    color: #fff;
+}
+
+ 
+
+.tours h1{
+    text-align: center;
+    font-size: var(--h1-font);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+.box{
+    position: relative;
+}
+.box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(200px, auto));
+    gap: 3rem;
+    padding: 15px 20px;
+}
+.box-container .box img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(70%);
+    object-fit: cover;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+.box-container .box img:hover{
+    filter: brightness(90%) hue-rotate(50deg);
+}
+.box-container h4{
+    position: absolute;
+    font-size: 20px;
+    bottom: 90px;
+    left: 25px;
+}
+.box-container h2{
+    position: absolute;
+    font-size: 30px;
+    bottom: 45px;
+    left: 25px;
+}
+
+.center-button{
+    text-align: center;
+
+}
+.center-button .holiday-btn{
+    background-color: rgb(24, 71, 72);
+    margin-top: 3rem;
+
+}
+.center-button .holiday-btn:hover{
+    background-color: transparent;
+    color: #fff;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,auto));
+    gap: 2rem;
+    padding: 15px 20px;
+    margin-top: 20px;
+}
+.footer-col{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.footer-col h3{
+   text-decoration:underline;
+}
+.footer-col a{
+    color: #514242;
+    transition: var(--transition);
+}
+.footer-col a:hover{
+    transform: translateX(10px);
+    color: var(--text-color);
+    background-color: rgba(0,0,0,0.6)
+}
+.footer-sosyal a{
+    display: inline-flex;
+    width: 45px;
+    height: 45px;
+    background-color: rgb(33, 79, 80);
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 10px;
+}
+.copyright{
+    text-align: center;
+    margin: 20px;
+    font-style:italic;
+}
+
+@media(max-width:800px){
+ .holiday{
+    grid-template-columns: 1fr;
+ }   
+ .navbar{
+    display: none;
+ }
+ :root{
+    --h1-font:2rem;
+    --h2-font:2rem;
+    --p-font:15px;
+ }
+ .home .home-text p.home-content{
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 50px;
+ }
+ h1.home-content{
+    bottom: 280px;
+}
+}
